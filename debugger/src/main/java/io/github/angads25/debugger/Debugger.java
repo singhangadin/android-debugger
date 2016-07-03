@@ -16,14 +16,14 @@ public class Debugger {
     private Debugger() {
     }
 
-    public static void v(String TAG, String message)
-    {   if(BuildConfig.DEBUG)
+    public void v(String TAG, String message)
+    {   if(!BuildConfig.DEBUG)
         {   Log.v(TAG, message);
         }
     }
 
-    public static void e(String TAG, String message)
-    {   if(BuildConfig.DEBUG)
+    public void e(String TAG, String message)
+    {   if(!BuildConfig.DEBUG)
         {   Log.e(TAG, message);
         }
     }
